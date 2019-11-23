@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Proxies;
+using Proxies.Configs;
+using RestSharp;
 
 namespace Api
 {
@@ -28,6 +31,14 @@ namespace Api
                 Version = "v1",
                 Title = "Сервис анализа поведения"
             }));
+
+            services
+                .AddScoped(c => Configuration
+                    .GetSection("ProxySettings")
+                    .Get<ProxySettingCollection>())
+                .AddScoped<IRestClient>(s => new RestClient())
+                .AddScoped<SantaAppProxy>()
+                .AddScoped<PerNoelAppProxy>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

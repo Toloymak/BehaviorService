@@ -1,6 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{A5E888EE-72E0-4397-BC8B-12335696577F}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{A5E888EE-72E0-4397-BC8B-12335696577F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxies", "Proxies\Proxies.csproj", "{A141DC3B-BE07-4F86-A183-1499337CFF59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2DD5F6BC-7F83-490D-9CCC-DDCD6D47F89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "ProxiesUnitTests\UnitTests.csproj", "{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dao", "Dao\Dao.csproj", "{2DEFAF98-5025-46AA-8AB6-07DF083EC969}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stubs", "Stubs", "{B8FD6BFD-1A3A-4E4B-A9EB-3D5D48E26559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SantaStubService", "Stubs\SantaStubService\SantaStubService.csproj", "{9CDC5D70-536C-45F9-905B-0309166F128D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +27,31 @@ Global
 		{A5E888EE-72E0-4397-BC8B-12335696577F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5E888EE-72E0-4397-BC8B-12335696577F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5E888EE-72E0-4397-BC8B-12335696577F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A141DC3B-BE07-4F86-A183-1499337CFF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A141DC3B-BE07-4F86-A183-1499337CFF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A141DC3B-BE07-4F86-A183-1499337CFF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A141DC3B-BE07-4F86-A183-1499337CFF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DEFAF98-5025-46AA-8AB6-07DF083EC969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEFAF98-5025-46AA-8AB6-07DF083EC969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEFAF98-5025-46AA-8AB6-07DF083EC969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEFAF98-5025-46AA-8AB6-07DF083EC969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CDC5D70-536C-45F9-905B-0309166F128D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDC5D70-536C-45F9-905B-0309166F128D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDC5D70-536C-45F9-905B-0309166F128D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDC5D70-536C-45F9-905B-0309166F128D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BD5DD21-9021-4A10-93C5-5718B5ABFEB1} = {2DD5F6BC-7F83-490D-9CCC-DDCD6D47F89D}
+		{9CDC5D70-536C-45F9-905B-0309166F128D} = {B8FD6BFD-1A3A-4E4B-A9EB-3D5D48E26559}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7642CD3-3055-43B7-82FE-F21AA2FC37D0}
 	EndGlobalSection
 EndGlobal

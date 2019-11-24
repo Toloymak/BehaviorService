@@ -1,21 +1,15 @@
-﻿using NUnit.Framework;
-using Proxies;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
+﻿using System;
 using System.Net;
-using System.Security.AccessControl;
-using System.Text;
 using Dao.Entities;
 using Moq;
-using Newtonsoft.Json;
+using NUnit.Framework;
+using Proxies;
 using Proxies.Configs;
 using Proxies.Models;
 using RestSharp;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
-namespace UnitTests.Tests
+namespace UnitTests.Tests.Proxy
 {
     public abstract class ProxyTestsBase : TestBase
     {

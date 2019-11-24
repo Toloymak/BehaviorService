@@ -15,7 +15,7 @@ namespace SantaStubService.Controllers
             {
                 Fio = fio,
                 Age = age,
-                Verdict = VerdictType.Good
+                Verdict = VerdictType.Bad
             };
 
             return Ok(verdictDto);

@@ -1,3 +1,5 @@
+using Dao;
+using Dao.Core.Persons;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -38,7 +40,10 @@ namespace Api
                     .Get<ProxySettingCollection>())
                 .AddScoped<IRestClient>(s => new RestClient())
                 .AddScoped<SantaAppProxy>()
-                .AddScoped<PerNoelAppProxy>();
+                .AddScoped<PerNoelAppProxy>()
+                .AddScoped<BehaviorContext>()
+                .AddScoped<PersonReader>()
+                .AddScoped<PersonWriter>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

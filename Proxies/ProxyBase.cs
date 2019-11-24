@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Net;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Proxies.Configs;
 using Proxies.Extensions;
 using Proxies.Models;
 using RestSharp;
-using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Proxies
 {
@@ -22,7 +24,7 @@ namespace Proxies
             this.restClient.BaseUrl = new Uri(proxySettings.Url);
         }
         
-        public VerdictResult GetVerdict(string fio, int age)
+        public virtual VerdictResult GetVerdict(string fio, int age)
         {
             var request = new RestRequest("api/BoysAndGirls");
             request.AddParameter("fio", fio);
@@ -41,8 +43,8 @@ namespace Proxies
                     ErrorMessage = response.Content
                 };
             }
-            
-            var verdictDto = JsonSerializer.Deserialize<VerdictDto>(response.Content);
+
+            var verdictDto = JsonConvert.DeserializeObject<VerdictDto>(response.Content);
             return new VerdictResult()
             {
                 VerdictDto = verdictDto,

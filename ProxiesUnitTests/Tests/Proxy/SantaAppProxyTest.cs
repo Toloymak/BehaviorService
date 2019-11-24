@@ -2,7 +2,7 @@
 using Proxies.Configs;
 using RestSharp;
 
-namespace UnitTests.Tests
+namespace UnitTests.Tests.Proxy
 {
     public class SantaAppProxyTest: ProxyTestsBase
     {
